@@ -1,5 +1,9 @@
 # Lambda Go SDLC Workflow
 
+![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+![Go](https://img.shields.io/badge/Go-1.x-blue.svg)
+![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-blue.svg)
+
 This repository is a working example of how a project can start with a
 Lambda function written using Python and added inline into a
 CloudFormation template for bootstrapping, then converted into a Go
