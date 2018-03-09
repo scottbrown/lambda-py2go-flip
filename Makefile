@@ -32,7 +32,7 @@ dist.file := $(dist.dir)/$(dist.filename)
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-init-stack: ## Creates the stack in AWS (!!! MAY INCUR COSTS !!!)
+init: ## Creates the stack in AWS (!!! MAY INCUR COSTS !!!)
 	# This is where you would add termination protection if this were
 	# a real application so that `make delete-stack` doesn't cause any
 	# accidental harm.
