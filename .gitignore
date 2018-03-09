@@ -16,5 +16,5 @@
 # Project derived directories
 .build/
 .dist/
-result.json
+result.out
 
