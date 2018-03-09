@@ -100,3 +100,20 @@ There are 3 motivations here: cost, deployment, and development.
   Opinions vary, but this is mine.  I also like ruby, vim and other
   contentious things.
 
+The biggest benefit of this architecture is that the parts that change
+the most are contained to within the function code itself, and the
+infrastructure stays relatively static for its lifetime.  By separating
+these pieces, the project will be more stable and permission structure
+(separation of duties) can be implemented if that is an organizational
+goal.
+
+## But What About Business Continuity?
+
+tl;dr Repeat phases _Initialize_ and _Prepare_.
+
+If the Lambda function is destroyed at any time, it can be rebuilt
+quickly.  The initial infrastructure is going to bootstrap itself
+as the stubbed Python application, but you can then redeploy the
+Go application quickly.  Since this is all held in the same Git
+repository, it will be tagged and versioned appropriately.
+
